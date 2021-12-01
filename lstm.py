@@ -9,13 +9,10 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
+def get_index(floor):
+    return [2 + floor + i * 4 for i in range(24)]
 if __name__ == "__main__":
     abnormal = set()
-    #path = "C:/Users/Yuanzhe Li/PyCharmProjects/untitled/INF551/560project/"
-    #"C:\Users\Yuanzhe Li\PycharmProjects\untitled\INF551\560project\abnormal_mac.json"
-    def get_index(floor):
-        return [2 + floor + i * 4 for i in range(24)]
-
     with open(ABNORMAL_MAC, "r") as f:
         # read each line in one json
         abnormal.update(json.loads(f.read()))
