@@ -48,7 +48,7 @@ if __name__ == "__main__":
                 else:
                     y.append(1)
             line = f.readline()
-    X = pd.read_csv(path+"input_mat.csv",sep=",",header=None).iloc[: , 2:]
+    X = pd.read_csv("input_mat.csv",sep=",",header=None).iloc[: , 2:]
     X_train, X_test, y_train, y_test = train_test_split(
         X,
         y,

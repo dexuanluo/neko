@@ -68,5 +68,3 @@ if __name__ == "__main__":
         for mac in tqdm(df, desc="Writing to file: "):
             s = ",".join(df[mac]) + "\n"
             f.write(mac + "," + s)
-        
-    
